@@ -2,7 +2,20 @@
 
 ## Welcome to our Group Project!
 
-# TODO
+## Project Part Delegation
+
+### FrontEnd Design / Initial Setup / General Development Help
+#### Damien
+### User Registration / Profile / Session Management
+#### Matt S
+### Homepage / Search Page / Search Result Page
+#### Chris H
+### Pairing Review Submission / Pairing Review Page
+#### UNCLAIMED
+### Wine & Cheese Info Management / DB Management Lead
+#### UNCLAIMED
+
+## TODO
 1. Think of a good name for the site
 2. Do UI/UX design
 3. Do research into how to actually host the site
