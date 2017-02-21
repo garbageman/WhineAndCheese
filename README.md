@@ -7,13 +7,13 @@
 ### FrontEnd Design / Initial Setup / General Development Help
 #### Damien
 ### User Registration / Profile / Session Management
-#### Matt S
+#### Matt
 ### Homepage / Search Page / Search Result Page
-#### Chris H
+#### Chris
 ### Pairing Review Submission / Pairing Review Page
-#### UNCLAIMED
+#### Simon
 ### Wine & Cheese Info Management / DB Management Lead
-#### UNCLAIMED
+#### Merlin
 
 ## TODO
 1. Think of a good name for the site
