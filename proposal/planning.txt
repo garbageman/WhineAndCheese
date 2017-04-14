@@ -1,0 +1,22 @@
+Stack setup:
+Javascript/HTML on client side
+PHP on serverside
+
+Create test cases and mockups for UI.
+
+
+Javascript is split up into two types:
+Services that are used by the page to get information. These scripts
+are responsible for making ajax requests to our backend REST services.
+Services should be designed to have unique functionality. What that means
+is that there should be services for user information, possibly called
+userService that will let the script user retrieve site user information.
+This can then be imported by the page that needs anything about users
+and allows for code reuse.
+
+Controllers that manipulate the HTML document. Each page should import
+the appropriate controller and whatever services are used. The controller
+is responsible for using the services to get information that will be displayed
+in the DOM.
+
+Example Page:
