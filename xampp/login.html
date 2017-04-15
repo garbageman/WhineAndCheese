@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
   <nav class="navbar navbar-default goat-bar">
@@ -32,8 +33,15 @@
   </nav>
   <div class="container-fluid page-body">
      <div class="container-fluid">
-       <div class="col-lg-offset-3 col-lg-6 login-container">
-         Trending Now
+       <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 login-box-container">
+         <div class="login-form login-header">
+           Login
+         </div>
+         <div class="input-group">
+            <input type="text" class="login-form login-text form-control" placeholder="Username" aria-describedby="basic-addon1">
+            <input type="password" class="login-form login-text form-control" placeholder="Password" aria-describedby="basic-addon1">
+            <input class="login-form login-submit btn btn-default" type="submit" value="Login">
+         </div>
        </div>
      </div>
   </div>
@@ -43,5 +51,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/config.js"></script>
 </footer>
 </html>
