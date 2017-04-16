@@ -21,8 +21,19 @@
 .login-submit {
   font-family: 'Lobster', cursive;
   font-size: 12px;
+  position: relative;
+  float: right;
 }
 
 .input-group {
-  width: 90%;
+  width: 100%;
+}
+
+.signup-toggle {
+    position: relative;
+    float: right;
+}
+
+#confirmPassword {
+  display: none;
 }

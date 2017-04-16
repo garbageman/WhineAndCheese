@@ -20,13 +20,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Goats &amp; Berries</a>
+      <a class="navbar-brand" href="/groupProject/xampp/index.html">Goats &amp; Berries</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="nav navbar-nav navbar-right login-container">
         <ul class="nav navbar-nav">
           <li><a href="#"><span class="glyphicon glyphicon-pencil white navbar-icon" aria-hidden="true"></span>Create A Review</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span>Login</a></li>
+          <li><a href="/groupProject/xampp/login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
         </ul>
       </div>
     </div>
@@ -35,13 +35,23 @@
      <div class="container-fluid">
        <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 login-box-container">
          <div class="login-form login-header">
-           Login
+           <div class="row">
+             <div class="login-label col-xs-8" id="loginLabel">
+               Login
+             </div>
+             <div class="col-xs-4">
+               <input class="signup-toggle btn btn-default" type="submit" value="Sign Up" id="toggleButton">
+             </div>
+           </div>
          </div>
-         <div class="input-group">
-            <input type="text" class="login-form login-text form-control" placeholder="Username" aria-describedby="basic-addon1">
-            <input type="password" class="login-form login-text form-control" placeholder="Password" aria-describedby="basic-addon1">
-            <input class="login-form login-submit btn btn-default" type="submit" value="Login">
-         </div>
+         <form action="" id="loginForm">
+           <div class="input-group">
+              <input type="text" class="login-form login-text form-control" placeholder="Username" aria-describedby="basic-addon1" id="username">
+              <input type="password" class="login-form login-text form-control" placeholder="Password" aria-describedby="basic-addon1" id="password">
+              <input type="password" class="login-form login-text form-control" placeholder="Confirm Password" aria-describedby="basic-addon1" id="confirmPassword">
+              <input class="login-form login-submit btn btn-default" type="submit" value="Login" id="confirmForm">
+           </div>
+         </form>
        </div>
      </div>
   </div>
@@ -52,5 +62,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="js/config.js"></script>
+    <script src="js/userService.js"></script>
+    <script src="js/userManager.js"></script>
+    <script src="js/loginPage.js"></script>
 </footer>
 </html>
