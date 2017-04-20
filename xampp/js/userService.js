@@ -13,18 +13,35 @@ var userService = {
     return new Promise((resolve, reject) => {
       $.ajax({
         url : CONFIG.baseTestURL + "LoginService.php",
-        data : credentials
+        data : credentials,
+        dataType : "json",
+        contentType: "application/json"
       }).done(function(response) {
-        resolve(response);
+        resolve(JSON.parse(response));
       }).error(function(err) {
         reject(err);
       });
     });
   },
   signUp : function(user,password) {
+    /* Create a credentials json for validation */
+    var credentials = {
+      "username" : user,
+      "password" : password
+    };
+
     /* This should eventually do something useful but it doesn't right now */
     return new Promise((resolve, reject) => {
-      resolve(true);
+      $.ajax({
+        url : CONFIG.baseTestURL + "SignUpService.php",
+        data : credentials,
+        dataType : "json",
+        contentType: "application/json"
+      }).done(function(response) {
+        resolve(JSON.parse(response));
+      }).error(function(err) {
+        reject(err);
+      });
     });
   },
   testREST : function() {

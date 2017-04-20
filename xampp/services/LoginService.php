@@ -21,7 +21,8 @@
 		    $passwordHash = $recordArray['password'];
         // Check that the password is correct
         if (password_verify($password,$passwordHash)) {
-          echo json_encode("{ result : true }");
+          $key = password_hash($userName,PASSWORD_BCRYPT);
+          echo json_encode(sprintf("{ \"result\" : true, \"username\" : \"%s\", \"key\" : \"%s\" }",$userName,$key));
         } else {
           echo json_encode("{ result : false }");
         }

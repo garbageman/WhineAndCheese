@@ -20,7 +20,7 @@
       $result = mysqli_query($db, $sqlQuery);
       if ($result) {
         /* Return a token and username validating the session */
-        $response = sprintf("{ result : true, message : \"%s\", username : \"%s\", token : \"%s\"}", "none", $userName, "none");
+        $response = sprintf("{ \"result\" : true, \"username\" : \"%s\" }", $userName);
         echo json_encode($response);
       } else {
         $response = sprintf("{ result : false, message : \"%s\"}",mysqli_error($db));

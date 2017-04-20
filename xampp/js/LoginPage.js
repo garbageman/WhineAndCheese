@@ -19,31 +19,60 @@ $("#toggleButton").click(function() {
 });
 
 /* When the form is submitted */
-$("form#loginForm").submit(function() {
+$("form#loginForm").submit(function(evt) {
+  /* Since the default action is to move to the next page */
+  /* Prevent the default actions */
+  var form = this;
+  evt.preventDefault();
+
   /* There is definitely an easier way to do this */
   // console.log("what's going on");
   var username = $("#username").val();
   var password = $("#password").val();
+  var checkPass = $("#confirmPassword").val();
 
   if (login) {
     /* If we are logging in, simply validate the user */
-    userService.validateLogin(username,password).then(function(response) {
+    userService.validateLogin(username,password).then(function(result) {
+      console.log(result);
       /* The username and key are stored in here */
-      if (response.username != "") {
+      if (result.username != "") {
         /* The login was valid */
-        UserManager.login(response.username, response.key);
+        UserManager.login(result.username, result.key);
       } else {
         /* Maybe error message goes here ? */
-        
+        console.log("username wasn't set");
       }
-    }).catch(function(error) {
-      console.log(error);
-    })
+      form.submit();
+    });
 
   } else {
     /* If we are signing up, validate the input and then */
     /* make a sign up request */
+    if (password == checkPass) {
+      /* Go through signup process */
+      userService.signUp(username,password).then(function(result) {
+        if (result.result) {
 
+          userService.validateLogin(username,password).then(function(result) {
+            console.log(result);
+            /* The username and key are stored in here */
+            if (result.username != "") {
+              /* The login was valid */
+              UserManager.login(result.username, result.key);
+            } else {
+              /* Maybe error message goes here ? */
+              console.log("username wasn't set");
+            }
+            form.submit();
+          });
+
+        } else {
+          /* I have no idea what error this should be */
+
+        }
+      })
+    }
   }
 });
 
