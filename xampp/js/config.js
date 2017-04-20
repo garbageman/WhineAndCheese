@@ -4,4 +4,4 @@
 
 var CONFIG = {};
 
-CONFIG.baseTestURL = "localhost/groupProject";
+CONFIG.baseTestURL = "/groupProject/xampp/services/";
