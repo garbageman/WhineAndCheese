@@ -77,3 +77,10 @@ $("form#loginForm").submit(function(evt) {
 });
 
 UserManager.setUserLink();
+
+// Check if the user is logged in, if so, redirect to landing page
+UserManager.validate().then(function(response) {
+  if (response.result) {
+    window.location.href = 'index.html';
+  }
+});

@@ -9,8 +9,8 @@
   $key = $_GET["key"];
 
   if (password_verify($userName,$key)) {
-    echo json_encode("{ result : true }");
+    echo json_encode("{ \"result\" : true }");
   } else {
-    echo json_encode("{ result : false }");
+    echo json_encode("{ \"result\" : false }");
   }
 ?>
