@@ -5,3 +5,4 @@
 var CONFIG = {};
 
 CONFIG.baseTestURL = "/groupProject/xampp/services/";
+CONFIG.AuthenticationURL = "Authentication.php";

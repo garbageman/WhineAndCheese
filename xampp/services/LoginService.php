@@ -1,7 +1,7 @@
 <?php
   header('Content-Type: application/json');
   require('connection.php');
-  $db = connectToTable("testUsers");
+  $db = establishConnection();
 
   // First check that the user supplied doesn't already exist
   $userName = $_GET["username"];
