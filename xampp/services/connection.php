@@ -8,7 +8,7 @@
     return $db;
   }
 
-  function connectToTable() {
+  function establishConnection() {
     $host = "localhost";
     $user = "testUser";
     $password = "moatsAndFerries";
