@@ -1,0 +1,21 @@
+
+Tables:
+- testUsers
+	- username: varchar(60)
+	- password: varchar(255)
+- pairing
+	- wine: varchar(60)
+	- cheese: varchar(60)
+	- totalRatings: int
+	- totalReviews: int
+	- averageRatings: float
+- wine
+	- name: varchar(60)
+	- information: varchar(500)
+	- image: longblob
+- cheese
+	- name: varchar(60)
+	- information: varchar(500)
+	- image: longblob
+
+
