@@ -37,3 +37,7 @@
 #confirmPassword {
   display: none;
 }
+
+#error {
+  display: none;
+}
