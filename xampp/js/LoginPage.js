@@ -69,7 +69,7 @@ $("form#loginForm").submit(function(evt) {
 
         } else {
           /* I have no idea what error this should be */
-
+          
         }
       })
     }
