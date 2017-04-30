@@ -34,10 +34,17 @@
     float: right;
 }
 
+.login-info {
+  display: inline-block;
+}
+
 #confirmPassword {
   display: none;
 }
 
 #error {
   display: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
 }

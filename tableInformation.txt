@@ -17,5 +17,9 @@ Tables:
 	- name: varchar(60)
 	- information: varchar(500)
 	- image: longblob
-
-
+- review
+	- name: varchar(60)
+	- wine: varchar(60)
+	- cheese: varchar(60)
+	- review: varchar(500)
+	- rating: int
