@@ -6,9 +6,8 @@ Tables:
 - pairing
 	- wine: varchar(60)
 	- cheese: varchar(60)
-	- totalRatings: int
-	- totalReviews: int
-	- averageRatings: float
+	- num_reviews: int
+	- avg_rating: float
 - wine
 	- name: varchar(60)
 	- information: varchar(500)
