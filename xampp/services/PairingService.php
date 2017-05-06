@@ -5,20 +5,51 @@
 
 	// wine and cheese parameters will always be set
 	$wine = $_GET["wine"];
-   $cheese = $_GET["cheese"];
+    $cheese = $_GET["cheese"];
 
 	// table names
-	$wineTable = "wine";
-	$cheeseTable = "cheese";
-	$pairingTable = "pairing";
+	$wine_table = "wine";
+	$cheese_table = "cheese";
+	$pairing_table = "pairing";
+	$review_table = "review";
 
-	// $genericQuery = "select * from %s where %s = '%s'";
-	$wineQuery = "select * from $wineTable where wine = '$wine'";
-	$cheeseQuery = "select * from $cheeseTable where cheese = '$cheese'";
-	$pairingQuery = "select * from $pairingTable where wine = '$wine' AND cheese = '$cheese'";
+	// set up queries
+	$wine_query = "select * from $wine_table where wine = '$wine'";
+	$cheese_query = "select * from $cheese_table where cheese = '$cheese'";
+	$pairing_query = "select * from $pairing_table where wine = '$wine' AND cheese = '$cheese'";
+	$review_query = "select * from $review_table where wine = '$wine' AND cheese = '$cheese'";
 
-	$wineResult = $db->query($wineQuery);
-	$cheeseResult = $db->query($cheeseQuery);
-	$pairingResult = $db->query($pairingQuery);
+	// just one result from wine, one result from cheese, multiple results from pairing
+	$wine_result = $db->query($wine_query);
+	$cheese_result = $db->query($cheese_query);
+	$pairing_result = $db->query($pairing_query);
+	$review_result = $db->query($review_query);
 
+	/* wine results*/
+	// get row in wine table for requested wine
+	$wine_Result->data_seek(0);
+	$wine_row = $wine_result->fetch_array(MYSQLI_ASSOC);
+	
+	$wine_info = $row['information'];
+	$wine_image = $row['image'];
+	
+	/* cheese results*/
+	// get row in cheese table for requested cheese
+	$cheese_result->data_seek(0);
+	$cheese_row = $cheese_result->fetch_array(MYSQLI_ASSOC);
+	
+	$cheese_info = $row['information'];
+	$cheese_image = $row['image'];
+	
+	/* pairing results*/
+	// get row in cheese table for requested cheese
+	$cheese_result->data_seek(0);
+	$cheese_row = $cheese_result->fetch_array(MYSQLI_ASSOC);
+	
+	$cheese_info = $row['information'];
+	$cheese_image = $row['image'];
+	
+	/* review results */
+	/* Number of rows found */
+	$num_rows = $result->num_rows;
 ?>
