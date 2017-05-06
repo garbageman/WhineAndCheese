@@ -1,0 +1,9 @@
+.review-box-container {
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #620017;
+  background-color: white;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+}

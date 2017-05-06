@@ -5,7 +5,7 @@ $("#searchButton").click(function() {
   console.log(query);
   var items = query.split(" & ");
   // Figure out if wine
-  window.location.href = "srp.html?item1=" + items[0].replace(" ","+").trim() + "&item2="+ items[1].replace(" ","+").trim();
+  window.location.href = "SearchResultPage.html?item1=" + items[0].replace(" ","+").trim() + "&item2="+ items[1].replace(" ","+").trim();
 });
 
 // Function that creates the innerHTML of
