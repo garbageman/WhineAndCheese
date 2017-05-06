@@ -69,7 +69,8 @@ $("form#loginForm").submit(function(evt) {
 
         } else {
           /* I have no idea what error this should be */
-          
+          $("#error").css("display","block");
+          $("#error").text(result.message);
         }
       })
     }

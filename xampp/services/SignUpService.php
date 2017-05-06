@@ -12,7 +12,7 @@
   if ($result) {
     $numberOfRows = mysqli_num_rows($result);
     if ($numberOfRows > 0) {
-        echo json_encode("{ result : false, message : \"UserName already exists\"}");
+        echo json_encode("{ \"result\" : false, \"message\" : \"Username already exists\"}");
     } else {
       /* There are no users with this name so create a new item */
       $encryptedPassword = password_hash($password, PASSWORD_BCRYPT);
@@ -23,7 +23,7 @@
         $response = sprintf("{ \"result\" : true, \"username\" : \"%s\" }", $userName);
         echo json_encode($response);
       } else {
-        $response = sprintf("{ result : false, message : \"%s\"}",mysqli_error($db));
+        $response = sprintf("{ \"result\" : false, \"message\" : \"%s\"}",mysqli_error($db));
         echo json_encode($response);
       }
     }
