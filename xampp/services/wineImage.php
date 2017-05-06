@@ -3,8 +3,8 @@
   require('connection.php');
   $db = establishConnection();
   // First check that the user supplied doesn't already exist
-  $cheese = $_GET["cheese"];
-  $table = "cheeseDummy";
+  $cheese = $_GET["wine"];
+  $table = "wines";
 
   $sqlQuery = sprintf("select * from %s", $table,$cheese);
 	$result = $db->query($sqlQuery);
