@@ -30,26 +30,31 @@
 	$wine_Result->data_seek(0);
 	$wine_row = $wine_result->fetch_array(MYSQLI_ASSOC);
 	
-	$wine_info = $row['information'];
-	$wine_image = $row['image'];
+	$wine_info = $wine_row['information'];
+	$wine_image = $wine_row['image'];
 	
 	/* cheese results*/
 	// get row in cheese table for requested cheese
 	$cheese_result->data_seek(0);
 	$cheese_row = $cheese_result->fetch_array(MYSQLI_ASSOC);
 	
-	$cheese_info = $row['information'];
-	$cheese_image = $row['image'];
+	$cheese_info = $cheese_row['information'];
+	$cheese_image = $cheese_row['image'];
 	
 	/* pairing results*/
-	// get row in cheese table for requested cheese
-	$cheese_result->data_seek(0);
-	$cheese_row = $cheese_result->fetch_array(MYSQLI_ASSOC);
+	// get row in pairing table for requested pairing
+	$pairing_result->data_seek(0);
+	$pairing_row = $pairing_result->fetch_array(MYSQLI_ASSOC);
 	
-	$cheese_info = $row['information'];
-	$cheese_image = $row['image'];
+	$pairing_info = $pairing_row['information'];
+	$pairing_image = $pairing_row['image'];
 	
 	/* review results */
 	/* Number of rows found */
-	$num_rows = $result->num_rows;
+	$num_review_rows = $review_result->num_rows;
+	$review_rows = array();
+	for ($row_index = 0; $row_index < $num_review_rows; $row_index++) {
+		$result->data_seek($row_index);
+		$review_rows[$row_index] = $result->fetch_array(MYSQLI_ASSOC);
+	}
 ?>
