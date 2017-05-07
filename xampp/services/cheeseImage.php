@@ -4,7 +4,7 @@
   $db = establishConnection();
   // First check that the user supplied doesn't already exist
   $cheese = $_GET["cheese"];
-  $table = "cheeseDummy";
+  $table = "cheese";
 
   $sqlQuery = sprintf("select * from %s", $table,$cheese);
 	$result = $db->query($sqlQuery);
