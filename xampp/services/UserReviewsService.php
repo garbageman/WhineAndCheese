@@ -4,14 +4,15 @@
   $db = establishConnection();
   // First check that the user supplied doesn't already exist
   $userName = $_GET["username"];
-  $password = $_GET["password"];
-  $table = "testUsers";
+  $table = "reviews";
 
   $sqlQuery = sprintf("select * from %s where username=\"%s\"", $table,$userName);
 	$result = mysqli_query($db, $sqlQuery);
   if ($result) {
     $numberOfRows = mysqli_num_rows($result);
     if ($numberOfRows > 0) {
+        /* Create a list of reviews */
+        
         echo json_encode("{ \"result\" : false, \"message\" : \"Username already exists\"}");
     } else {
       /* There are no users with this name so create a new item */

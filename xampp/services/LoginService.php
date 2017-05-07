@@ -24,14 +24,14 @@
           $key = password_hash($userName,PASSWORD_BCRYPT);
           echo json_encode(sprintf("{ \"result\" : true, \"username\" : \"%s\", \"key\" : \"%s\" }",$userName,$key));
         } else {
-          echo json_encode("{ result : false }");
+          echo json_encode("{ \"result\" : false }");
         }
      	}
 		  mysqli_free_result($result);
     } else {
-      echo json_encode("{ result : false }");
+      echo json_encode("{ \"result\" : false }");
     }
   } else {
-    echo json_encode("{ result : false }");
+    echo json_encode("{ \"result\" : false }");
   }
  ?>

@@ -64,6 +64,20 @@ var userService = {
       });
     });
   },
+  validateUsername: function(username) {
+    var data = {
+        "username" : username
+    };
+    // This function checks if a username actually exists
+    return new Promise((resolve,reject) => {
+      $.ajax({
+        url : CONFIG.baseTestURL + "checkUsername.php",
+        data : data
+      }).done(function(response) {
+        resolve(JSON.parse(response));
+      });
+    });
+  },
   testREST : function() {
     var testData = {
         wine : "dnagle",
