@@ -4,9 +4,11 @@
 
 var CONFIG = {};
 
-CONFIG.baseTestURL = "/groupProject/xampp/services/";
+CONFIG.baseTestURL = "groupProject/xampp/services/";
+//CONFIG.baseTestURL = "buttheadchris"
 CONFIG.AuthenticationURL = "Authentication.php";
-CONFIG.cheeseURL = "cheeseImage.php";
+CONFIG.cheeseURL = "groupProject/xampp/services/cheeseImage.php";
+CONFIG.wineURL = "groupProject/xampp/services/wineImage.php";
 CONFIG.QueryString = () => {
   // This function is anonymous, is executed immediately and
   // the return value is assigned to QueryString!
