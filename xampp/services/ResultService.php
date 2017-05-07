@@ -14,7 +14,7 @@ $cheese_table = "cheese";
 $pairing_table = "pairing";
 
 if (!isset($_GET['item1'])) {
-    $result = "Invalid Query";
+    $result = "Empty Query";
     echo $result;
     exit();
 }
