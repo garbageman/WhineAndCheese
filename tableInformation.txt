@@ -7,6 +7,7 @@ Tables:
 	- wine: varchar(60)
 	- cheese: varchar(60)
 	- num_reviews: int
+	- total_rating: int
 	- avg_rating: float
 - wine
 	- name: varchar(60)

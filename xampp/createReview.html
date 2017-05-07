@@ -3,13 +3,12 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/createReview.css">
+
 </head>
 <body>
   <nav class="navbar navbar-default goat-bar">
@@ -32,28 +31,58 @@
     </div>
   </nav>
   <div class="container-fluid page-body">
-     <div class="container-fluid">
-       
-      <!-- Review for  -->
-      <div id="title">
-        <br><br>
-        <h1> Review a wine or cheese </h1><br><br>
+    <div class="container-fluid">
+      
+      <h1 id="wineAndCheese"> Name of wine and cheese pairing </h1>
+
+      <div id="pairing">
+    		<img id="image1" src="" width="300" height="250" alt="pairing1" /> &nbsp;&nbsp;&nbsp;
+        &amp;&nbsp;&nbsp;&nbsp;
+    		<img id="image3" src="" width="300" height="250" alt="pairing3" /> <br> <br>
       </div>
 
-      <div class="container-fluid">
-        <div class="row searchbar-container">
-          <div class="col-lg-offset-3 col-lg-6">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for a wine or a cheese...">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-              </span>
-            </div><!-- /input-group -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-       </div>
-     </div>
+      <form action = "" id="reviewForm">
+        <div id="pairing">
+          <h1> Your Review </h1>
+      		<fieldset class="starRating" id="rating">
+      			<input id="rating5" type="radio" name="rating" value="5" title="The Damien DELIGHT!!!" >
+            <label for="rating5">5</label>
+            <input id="rating4" type="radio" name="rating" value="4" title="Not bad at ALL">
+            <label for="rating4">4</label>
+            <input id="rating3" type="radio" name="rating" value="3" title="I'd give this to Chris">
+            <label for="rating3">3</label>
+            <input id="rating2" type="radio" name="rating" value="2" title="Maybe if I'm tipsy">
+            <label for="rating2">2</label>
+            <input id="rating1" type="radio" name="rating" value="1" title="Only when I am wasted" checked>
+            <label for="rating1">1</label>
+          </fieldset>
+          <br> <br>
 
+      	
+      		<textarea id="review" placeholder="Leave your review here!">
+      			
+      		</textarea>
+        </div>
+      </form>
+
+      <br>
+      <br>
+      <br>
+
+      <div id="buttons">
+      	<input type="submit" id="clear" value="Clear"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	<input type="submit" id="submit" value="Post Review">
+      </div>
+
+    	<br>
+    	<br>
+    	<br>
+
+
+    	
+
+
+    </div>
   </div>
 </body>
 <footer>

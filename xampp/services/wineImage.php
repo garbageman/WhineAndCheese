@@ -3,10 +3,10 @@
   require('connection.php');
   $db = establishConnection();
   // First check that the user supplied doesn't already exist
-  $cheese = $_GET["wine"];
-  $table = "wines";
+  $wine = $_GET["wine"];
+  $table = "wine";
 
-  $sqlQuery = sprintf("select * from %s", $table,$cheese);
+  $sqlQuery = sprintf("select * from %s", $table,$wine);
 	$result = $db->query($sqlQuery);
   if ($result) {
     //echo "got a result";
