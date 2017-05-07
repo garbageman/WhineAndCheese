@@ -4,7 +4,7 @@
 
 var CONFIG = {};
 
-CONFIG.baseTestURL = "groupProject/xampp/services/";
+CONFIG.baseTestURL = "services/";
 //CONFIG.baseTestURL = "buttheadchris"
 CONFIG.AuthenticationURL = "Authentication.php";
 CONFIG.cheeseURL = "groupProject/xampp/services/cheeseImage.php";
@@ -29,5 +29,6 @@ CONFIG.QueryString = () => {
       query_string[pair[0]].push(decodeURIComponent(pair[1]));
     }
   }
+  //console.log(query_string);
   return query_string;
 };
