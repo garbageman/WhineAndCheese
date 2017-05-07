@@ -41,27 +41,29 @@
     		<img id="image3" src="" width="300" height="250" alt="pairing3" /> <br> <br>
       </div>
 
-      <div id="pairing">
-        <h1> Your Review </h1>
-    		<fieldset class="starRating">
-    			<input id="rating5" type="radio" name="rating" value="5" title="The Damien DELIGHT!!!" >
-          <label for="rating5">5</label>
-          <input id="rating4" type="radio" name="rating" value="4" title="Not bad at ALL">
-          <label for="rating4">4</label>
-          <input id="rating3" type="radio" name="rating" value="3" title="I'd give this to Chris">
-          <label for="rating3">3</label>
-          <input id="rating2" type="radio" name="rating" value="2" title="Maybe if I'm tipsy">
-          <label for="rating2">2</label>
-          <input id="rating1" type="radio" name="rating" value="1" title="Only when I am wasted" checked>
-          <label for="rating1">1</label>
-        </fieldset>
-        <br> <br>
+      <form action = "" id="reviewForm">
+        <div id="pairing">
+          <h1> Your Review </h1>
+      		<fieldset class="starRating" id="rating">
+      			<input id="rating5" type="radio" name="rating" value="5" title="The Damien DELIGHT!!!" >
+            <label for="rating5">5</label>
+            <input id="rating4" type="radio" name="rating" value="4" title="Not bad at ALL">
+            <label for="rating4">4</label>
+            <input id="rating3" type="radio" name="rating" value="3" title="I'd give this to Chris">
+            <label for="rating3">3</label>
+            <input id="rating2" type="radio" name="rating" value="2" title="Maybe if I'm tipsy">
+            <label for="rating2">2</label>
+            <input id="rating1" type="radio" name="rating" value="1" title="Only when I am wasted" checked>
+            <label for="rating1">1</label>
+          </fieldset>
+          <br> <br>
 
-    	
-    		<textarea placeholder="Leave your review here!">
-    			
-    		</textarea>
-      </div>
+      	
+      		<textarea id="review" placeholder="Leave your review here!">
+      			
+      		</textarea>
+        </div>
+      </form>
 
       <br>
       <br>

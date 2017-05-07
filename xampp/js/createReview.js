@@ -27,4 +27,12 @@ $("#clear").click(function() {
 	$("#rating1").prop("checked", true);
 });
 
+
+// Section for adding into database on submit.
+
+$("#submit").click(function() {
+	console.log("submitted");
+
+});
+
 // document.getElementById("slideShow").onclick = viewer.getArrayPhotosNames;

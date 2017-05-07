@@ -51,8 +51,8 @@ textarea {
   content         : '';
   display         : block;
   width           : 1.5em;
-  height          : 1.5em;
-  background      : url('fishbowl.svg');
+  height          : 1.5em;  
+  background      : url('damien.png');
   background-size : contain;
   opacity         : 0;
   transition      : opacity 0.2s linear;
