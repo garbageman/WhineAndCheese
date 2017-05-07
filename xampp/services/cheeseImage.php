@@ -4,9 +4,9 @@
   $db = establishConnection();
   // First check that the user supplied doesn't already exist
   $cheese = $_GET["cheese"];
-  $table = "cheeseDummy";
+  $table = "cheese";
 
-  $sqlQuery = sprintf("select * from %s", $table,$cheese);
+  $sqlQuery = sprintf("select * from %s where name=\"%s\"", $table, $cheese);
 	$result = $db->query($sqlQuery);
   if ($result) {
     //echo "got a result";

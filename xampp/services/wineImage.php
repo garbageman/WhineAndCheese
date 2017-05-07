@@ -6,7 +6,7 @@
   $wine = $_GET["wine"];
   $table = "wine";
 
-  $sqlQuery = sprintf("select * from %s", $table,$wine);
+  $sqlQuery = sprintf("select * from %s where name=\"%s\"", $table, $wine);
 	$result = $db->query($sqlQuery);
   if ($result) {
     //echo "got a result";
