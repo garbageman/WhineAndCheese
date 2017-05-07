@@ -2,10 +2,16 @@ UserManager.setUserLink();
 
 $("#searchButton").click(function() {
   var query = $("#searchBar").val();
-  console.log(query);
   var items = query.split(" & ");
   // Figure out if wine
-  window.location.href = "SearchResultPage.html?item1=" + items[0].replace(" ","+").trim() + "&item2="+ items[1].replace(" ","+").trim();
+  let str = "SearchResultPage.html?item1=";
+  if (items.length > 0) {
+    str = str + items[0].replace(" ","+").trim();
+    if (items.length > 1) {
+      str =  str + "&item2="+ items[1].replace(" ","+").trim();
+    }
+  }
+  window.location.href = str;
 });
 
 // Function that creates the innerHTML of

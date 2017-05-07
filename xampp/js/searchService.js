@@ -13,7 +13,7 @@ let searchService = {
         /* Create a promise that resolves when the ajax query for validation works */
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: CONFIG.baseTestURL + "services/ResultService.php",
+                url: CONFIG.baseTestURL + "ResultService.php",
                 data: searchParams,
                 dataType: "json",
                 contentType: "application/json"

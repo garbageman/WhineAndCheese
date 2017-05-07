@@ -29,6 +29,7 @@
     }
   } else {
     // Something went horribly wrong with the search so log the error
+    echo $result
     echo json_encode("{ result : false, message : \"There was an issue with the query\"}");
   }
  ?>

@@ -1,6 +1,7 @@
 
 /* First check if the user exists */
 var user = CONFIG.QueryString()['user'];
+
 userService.validateUsername(user).then(function(response) {
   //console.log(response);
   if (response.result) {
@@ -10,3 +11,6 @@ userService.validateUsername(user).then(function(response) {
   }
 });
 /* Check if the user is the one currently logged in */
+$("#logoutButton").click(function() {
+  UserManager.logout();
+})
