@@ -4,7 +4,7 @@ UserManager.validate().then(function(response) {
   if (!response.result) {
     window.location.href="login.html?redirect=createReview";
   } else {
-  	
+
   }
 });
 
@@ -28,11 +28,37 @@ $("#clear").click(function() {
 });
 
 
+function getRating() {
+  let i = 1;
+  for (; i <= 5;i++) {
+    if ($("#rating" + i).is(":checked")) {
+      return i;
+    }
+  }
+  return 0;
+}
+
 // Section for adding into database on submit.
 
 $("#submit").click(function() {
-	console.log("submitted");
+	// Validate that the user is still logged in
+  UserManager.validate().then(function(response) {
+    // The user is logged in
+    if (response.result == true) {
+      // Then we feel safe getting the info
+      var review = $("#review").val().replace(" ","+");
+      var rating = getRating();
+      var user = UserManager.user();
+      ReviewService.createReview(user,wine,cheese,review,rating).then(function(response) {
+        var res = JSON.parse(response);
+        if (res.result) {
+          console.log("we tried");
+          window.location.replace("pairing.html?wine="+wine+"&cheese="+cheese);
+        } else {
+          // error message if fails
+        }
+      });
+    }
+  });
 
 });
-
-// document.getElementById("slideShow").onclick = viewer.getArrayPhotosNames;
