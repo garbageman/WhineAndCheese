@@ -31,9 +31,9 @@ function generateReviewsSection (reviews) {
     for (let review of reviews) {
         let userProfileUrl = relocateUserProfile(review.userName);
         let starRating = generateStarRating(review.rating);
-        
+
         reviewSection.innerHTML += "<div class='row searchrow hover' id='result" + id + "'>";
-        
+
         let row = document.getElementById("result" + id);
         row.innerHTML = `<span class='col-lg-8 pairing'><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
         row.innerHTML += `${starRating}<br>`;
@@ -82,35 +82,35 @@ function main () {
     let cheeseUrl = CONFIG.cheeseURL + "?cheese=" + cheeseName;
     console.log(wineUrl);
     console.log(cheeseUrl);
-    
+
     document.getElementById("wine-img").src = wineUrl;
     document.getElementById("cheese-img").src = cheeseUrl;
-    
+
     //$("#image1").attr("src", wineConcat);
     //$("#image3").attr("src", cheeseConcat);
-    
+
     document.getElementById("pairing-title").innerHTML = title;
     document.getElementById("wine-title").innerHTML = wineName;
     document.getElementById("cheese-title").innerHTML = cheeseName;
     document.getElementById("toReviewButton").onclick = function () { relocateWriteReview(wineName, cheeseName); };
-    
+
     //document.getElementById("wine-info").innerHTML = getInformation(wineName);
-    
+
     InfoService.validateSearch("wine", wineName).then(function (result) {
         let wineInfo = result[0]["information"];
         generatePairingInformationSection("wine-info", wineInfo);
     });
-    
+
     InfoService.validateSearch("cheese", cheeseName).then(function (result) {
         let cheeseInfo = result[0]["information"];
         generatePairingInformationSection("cheese-info", cheeseInfo);
     });
-    
+
     searchService.validateSearch(wineName, cheeseName).then(function (result) {
         let rating = result[0]["avg_rating"];
         console.log("avg rating: " + rating);
     });
-    
+
     grabReviewsService.validateSearch(wineName, cheeseName).then(function (result) {
         let reviews = buildReviews(result);
         for (let review of reviews) {
@@ -118,9 +118,13 @@ function main () {
         }
         generateReviewsSection(reviews);
     });
-    
+
+    UserManager.setUserLink();
+
+    $("#logoutLink").click(function() {
+      UserManager.logout();
+      UserManager.setUserLink();
+      $("#logoutLink").css("display","none");
+    });
+
 }
-
-
-
-
