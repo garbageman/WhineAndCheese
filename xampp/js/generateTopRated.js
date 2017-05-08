@@ -15,7 +15,7 @@ function generateBest(topRatings) {
         thumbnail.innerHTML += "<div id='header" + id + "' class='thumbnail-header'></div>" +
             "<div id='rating" + id + "' class='thumbnail-rating'></div>";
         document.getElementById("header"+id).innerHTML += pairing['wine'] + " & " + pairing['cheese'];
-        document.getElementById("rating"+id).innerHTML += "Rating: " + pairing['rating'];
+        document.getElementById("rating"+id).innerHTML += "Rating: " + pairing['avg_rating'];
         id++;
     }
 
