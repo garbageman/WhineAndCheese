@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/searchResult.css">
 </head>
 <body>
   <nav class="navbar navbar-default goat-bar">
@@ -42,7 +43,7 @@
       <div class="row searchbar-container">
         <div class="col-lg-offset-3 col-lg-6">
           <div class="input-group">
-            <input type="text" id="searchBar" class="form-control" placeholder="Search for a wine or a cheese...">
+            <input type="text" id="searchBar" onkeypress="handle(event)" class="form-control" placeholder="Search for a wine or a cheese...">
             <span class="input-group-btn">
               <button class="btn btn-default" id="searchButton" type="button">Go!</button>
             </span>
@@ -54,111 +55,7 @@
        <div class="col-lg-offset-3 col-lg-6 top-section-header">
          Top Rated Pairings
        </div>
-       <div class="col-lg-offset-2 col-lg-8 top-section">
-         <div class="col-lg-4 thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4  thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4  thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4  thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4  thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4 thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4  thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-         <div class="col-lg-4  thumbnail-col">
-           <div class="thumbnail">
-             <div class="thumbnail-header">
-               Merlot &amp; Parmesan
-             </div>
-
-             <div class="thumbnail-rating">
-               Average Rating : 4.5
-             </div>
-           </div>
-         </div>
-
-       </div>
-     </div>
-     <div class="container-fluid">
-
+         <div id="top_rated" class="col-lg-offset-2 col-lg-8 top-section"></div>
      </div>
   </div>
 </body>
@@ -171,5 +68,7 @@
     <script src="js/userService.js"></script>
     <script src="js/userManager.js"></script>
     <script src="js/Landing.js"></script>
+    <script src="js/searchService.js"></script>
+    <script src="js/generateTopRated.js"></script>
 </footer>
 </html>
