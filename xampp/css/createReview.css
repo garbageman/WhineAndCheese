@@ -31,8 +31,8 @@ textarea {
   width          : 7.5em;
   height         : 1.5em;
   overflow       : hidden;
-  vertical-align : bottom;
-}
+/*  vertical-align : bottom;
+*/}
 
 .starRating:not(old) > input{
   margin-right : -100%;
@@ -75,5 +75,7 @@ textarea {
 
 
 #buttons {
-  text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    text-align: center;
 }
