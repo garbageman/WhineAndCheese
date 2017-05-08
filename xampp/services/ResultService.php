@@ -57,6 +57,8 @@ else
 
 if($result = $db->query($sqlQuery)) {
   echo(json_encode($result->fetch_all(MYSQLI_ASSOC)));
+} else {
+    echo json_encode(" { result : false, message : \"No Query\"}");
 }
 
-echo json_encode(" { result : false, message : \"No Query\"}");
+
