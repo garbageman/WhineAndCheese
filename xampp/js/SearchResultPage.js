@@ -74,5 +74,10 @@ function main() {
         let pairings = buildPairings(result);
         displayResults(pairings);
     });
-
+    UserManager.setUserLink();
+    $("#logoutLink").click(function() {
+      UserManager.logout();
+      UserManager.setUserLink();
+      $("#logoutLink").css("display","none");
+    });
 }

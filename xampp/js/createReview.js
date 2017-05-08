@@ -62,3 +62,5 @@ $("#submit").click(function() {
   });
 
 });
+
+UserManager.setUserLink();
