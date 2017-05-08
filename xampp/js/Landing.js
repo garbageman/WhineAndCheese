@@ -1,10 +1,9 @@
 UserManager.setUserLink();
 
 $("#searchButton").click(function() {
-  var query = $("#searchBar").val();
-  var items = query.split(" & ");
+    let items = query.split(" & ");
   // Figure out if wine
-  let str = "SearchResultPage.html?item1=";
+    let str = "searchResult.html?item1=";
   if (items.length > 0) {
     str = str + items[0].replace(" ","+").trim();
     if (items.length > 1) {
@@ -14,7 +13,7 @@ $("#searchButton").click(function() {
   window.location.href = str;
 });
 
-// Function that creates the innerHTML of
-var createThumbnail = function(wine, cheese) {
-
-};
+// // Function that creates the innerHTML of
+// let createThumbnail = function(wine, cheese) {
+//
+// };
