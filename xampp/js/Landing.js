@@ -29,7 +29,8 @@ var handle = function(e) {
   }
 };
 
-// // Function that creates the innerHTML of
-// let createThumbnail = function(wine, cheese) {
-//
-// };
+$("#logoutLink").click(function() {
+  UserManager.logout();
+  UserManager.setUserLink();
+  $("#logoutLink").css("display","none");
+});
