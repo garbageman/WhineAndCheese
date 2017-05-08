@@ -28,7 +28,7 @@ img.pairing-img {
    color: white;
    /*border-color: #842239;*/
    /* Some sort of border */
-   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+   text-shadow: -1px 0 #842239, 0 1px #842239, 1px 0 #842239, 0 -1px #842239;
 }
 
 .star {

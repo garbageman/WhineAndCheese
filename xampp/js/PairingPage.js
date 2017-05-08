@@ -18,6 +18,7 @@ function buildReviews (reviewsServiceResult) {
     for (let ele of reviewsServiceResult) {
         reviews.push(new Review(ele['name'], ele['review'], ele['rating']));
     }
+    reviews.reverse();
     return reviews;
 }
 
@@ -25,18 +26,6 @@ function generatePairingInformationSection (sectionId, content) {
     document.getElementById(sectionId).innerHTML = content;
 }
 
-
-//<div class="col-lg-4 thumbnail-col">
-//<div class="thumbnail">
-//  <div class="thumbnail-header">
-//    <span>Merlot &amp; Parmesan</span>
-//    <span class='star'>&#9733;</span>
-//  </div>
-//  <div>
-//    This is a great pairing.
-//  </div>
-//</div>
-//</div>
 
 function generateReviewsSection (reviews) {
     let reviewSection = document.getElementById("all-reviews");
@@ -56,43 +45,6 @@ function generateReviewsSection (reviews) {
         reviewSection.innerHTML += "</div>";
         id++;
     }
-    
-    //for (let review of reviews) {
-    //    let userProfileUrl = relocateUserProfile(review.userName);
-    //    let starRating = generateStarRating(review.rating);
-    //    
-    //    reviewSection.innerHTML += `<div class="col-lg-4 thumbnail-col">`;
-    //    reviewSection.innerHTML += `<div class="thumbnail">`;
-    //    reviewSection.innerHTML += `<div class="thumbnail-header">`;
-    //    reviewSection.innerHTML += `<span><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
-    //    reviewSection.innerHTML +=  `${starRating}`;
-    //    reviewSection.innerHTML += `</div>`;
-    //    reviewSection.innerHTML += `<div>${review.review}</div>`;
-    //    reviewSection.innerHTML += `</div></div>`;
-        
-       
-        //reviewSection.innerHTML += "<div class='row searchrow hover' id='result" + id + "'>";
-        //
-        //let row = document.getElementById("result" + id);
-        //row.innerHTML = `<span class='col-lg-8 pairing'><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
-        //row.innerHTML += `${starRating}<br>`;
-        //row.innerHTML += `<span class='col-lg-2 rating'>Review: ${review.review} </span>`;
-        
-        
-        //row.innerHTML += `<span class='col-lg-2 numReviews'>Rating: ${review.rating} </span>`;
-
-        // for (let field in pairing) {
-        //     if (pairing.hasOwnProperty(field)) {
-        //         row.innerHTML += "<span class='col-lg-3 searchcol " + field + "'>" + pairing[field] + "</span>";
-        //     }
-        //     id++;
-        // }
-
-        //reviewSection.innerHTML += "</div>";
-        //id++;
-    //}
-    
-    
 }
 
 function relocateWriteReview(wine, cheese) {
