@@ -49,13 +49,6 @@ function displayResults(pairings) {
         row.innerHTML += "<span class='col-lg-2 rating'>Rating: " + pairing['rating'] + "</span>";
         row.innerHTML += "<span class='col-lg-2 numReviews'>Reviews: " + pairing['numReviews'] + "</span>";
 
-        // for (let field in pairing) {
-        //     if (pairing.hasOwnProperty(field)) {
-        //         row.innerHTML += "<span class='col-lg-3 searchcol " + field + "'>" + pairing[field] + "</span>";
-        //     }
-        //     id++;
-        // }
-
         results.innerHTML += "</div>";
         id++;
     }
@@ -69,7 +62,11 @@ function displayResults(pairings) {
 
 function relocate(wine, cheese) {
 
-    let url = CONFIG.baseTestURL + "pairing.html";
+<<<<<<< HEAD
+    let url = "pairing.html"; //CONFIG.baseTestURL + "pairing.html";
+=======
+    let url = "pairing.html";
+>>>>>>> bafd54fdee363409c0ff1dafddd068f7625a4367
     let params = ("?wine=" + wine + "&" + "cheese=" + cheese).replace(" ", "+");
 
     window.location.href = url + params;

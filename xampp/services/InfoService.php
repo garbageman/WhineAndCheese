@@ -8,7 +8,7 @@ mysqli_set_charset($db, 'utf8');
 
 if (isset($_GET["wine"])) {
     $name = $_GET["wine"];
-    $table = "wine2";
+    $table = "wine";
 } else {
     $name = $_GET["cheese"];
     $table = "cheese";
