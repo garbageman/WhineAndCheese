@@ -25,19 +25,60 @@ function generatePairingInformationSection (sectionId, content) {
     document.getElementById(sectionId).innerHTML = content;
 }
 
+
+//<div class="col-lg-4 thumbnail-col">
+//<div class="thumbnail">
+//  <div class="thumbnail-header">
+//    <span>Merlot &amp; Parmesan</span>
+//    <span class='star'>&#9733;</span>
+//  </div>
+//  <div>
+//    This is a great pairing.
+//  </div>
+//</div>
+//</div>
+
 function generateReviewsSection (reviews) {
-    let reviewSection = document.getElementById("pairing-reviews");
+    let reviewSection = document.getElementById("all-reviews");
     let id = 0;
+    
     for (let review of reviews) {
         let userProfileUrl = relocateUserProfile(review.userName);
         let starRating = generateStarRating(review.rating);
+        
+        reviewSection.innerHTML += "<div class='thumbnail col-lg-4  thumbnail-col' id='review" + id + "'>";
 
-        reviewSection.innerHTML += "<div class='row searchrow hover' id='result" + id + "'>";
+        let row = document.getElementById("review" + id);
+        row.innerHTML = `<span class='  thumbnail-header '><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
+        row.innerHTML += `<span class='  col-lg-2 rating'>${starRating}</span><br>`;
+        row.innerHTML += `<span class=' '>${review.review}</span>`;
 
-        let row = document.getElementById("result" + id);
-        row.innerHTML = `<span class='col-lg-8 pairing'><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
-        row.innerHTML += `${starRating}<br>`;
-        row.innerHTML += `<span class='col-lg-2 rating'>Review: ${review.review} </span>`;
+        reviewSection.innerHTML += "</div>";
+        id++;
+    }
+    
+    //for (let review of reviews) {
+    //    let userProfileUrl = relocateUserProfile(review.userName);
+    //    let starRating = generateStarRating(review.rating);
+    //    
+    //    reviewSection.innerHTML += `<div class="col-lg-4 thumbnail-col">`;
+    //    reviewSection.innerHTML += `<div class="thumbnail">`;
+    //    reviewSection.innerHTML += `<div class="thumbnail-header">`;
+    //    reviewSection.innerHTML += `<span><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
+    //    reviewSection.innerHTML +=  `${starRating}`;
+    //    reviewSection.innerHTML += `</div>`;
+    //    reviewSection.innerHTML += `<div>${review.review}</div>`;
+    //    reviewSection.innerHTML += `</div></div>`;
+        
+       
+        //reviewSection.innerHTML += "<div class='row searchrow hover' id='result" + id + "'>";
+        //
+        //let row = document.getElementById("result" + id);
+        //row.innerHTML = `<span class='col-lg-8 pairing'><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
+        //row.innerHTML += `${starRating}<br>`;
+        //row.innerHTML += `<span class='col-lg-2 rating'>Review: ${review.review} </span>`;
+        
+        
         //row.innerHTML += `<span class='col-lg-2 numReviews'>Rating: ${review.rating} </span>`;
 
         // for (let field in pairing) {
@@ -47,9 +88,11 @@ function generateReviewsSection (reviews) {
         //     id++;
         // }
 
-        reviewSection.innerHTML += "</div>";
-        id++;
-    }
+        //reviewSection.innerHTML += "</div>";
+        //id++;
+    //}
+    
+    
 }
 
 function relocateWriteReview(wine, cheese) {
@@ -65,9 +108,13 @@ function relocateUserProfile(user) {
 
 function generateStarRating(rating) {
     let result = "";//"<div class='star'>";
-    let num = rating;
+    let num = 5;
     for (let i = 0; i < rating; i++) {
         result += "<span class='star'>&#9733;</span>";
+        num--;
+    }
+    for (let i = 0; i < num; i++) {
+        result += "<span class='star border'>&#9733;</span>";
     }
     //result += "</div>";
     return result;
