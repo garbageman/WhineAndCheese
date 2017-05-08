@@ -1,47 +1,72 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/userprofile.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>1 Col Portfolio - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Custom CSS -->
+    <!-- <link href="css/1-col-portfolio.css" rel="stylesheet"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
+
+    <!-- Navigation -->
   <nav class="navbar navbar-default goat-bar">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Goats &amp; Berries</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="nav navbar-nav navbar-right login-container">
-        <ul class="nav navbar-nav">
-          <li><a href="#"><span class="glyphicon glyphicon-pencil white navbar-icon" aria-hidden="true"></span>Create A Review</a></li>
-          <li><a href="login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
-        </ul>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Goats &amp; Berries</a>
       </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="nav navbar-nav navbar-right login-container">
+          <ul class="nav navbar-nav">
+            <li><a href="#"><span class="glyphicon glyphicon-pencil white navbar-icon" aria-hidden="true"></span>Create A Review</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
+          </ul>
+        </div>
     </div>
   </nav>
-  <div class="container-fluid page-body">
-     <div class="container-fluid">
-       <div class="profile-header">
-         <div class="username-container" id="username"></div>
-         <input class="btn btn-default logout-button" id="logoutButton" type="button" value="Logout">
-        </div>
-     </div>
-  </div>
-</body>
-<footer>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <div id="txtHint" class="userProfile">
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -49,5 +74,8 @@
     <script src="js/userService.js"></script>
     <script src="js/userManager.js"></script>
     <script src="js/ProfilePage.js"></script>
-</footer>
+    <script src="js/userProfile.js"></script>
+
+</body>
+
 </html>

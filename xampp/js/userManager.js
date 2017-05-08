@@ -45,6 +45,7 @@ var UserManager = {
     userService.validateSession(username,key).then(function(response) {
       if (response.result) {
         $("#loginLink").text(UserManager.user());
+        $("#logoutLink").css("display","list-item");
       }else {
         $("#loginLink").text("Login");
       }
