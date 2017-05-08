@@ -16,8 +16,6 @@ h1 {
 
 img {
    padding:1px;
-   border:1px solid #021a40;
-   background-color:#ff0;
 }
 
 textarea {
@@ -25,43 +23,6 @@ textarea {
   height: 300px;
 
 }
-
-/*.starRating:not(old){ 
-  display        : inline-block;
-  width          : 7.5em;
-  height         : 1.5em;
-  overflow       : hidden;
-}
-
-.starRating:not(old) > input{
-  margin-right : -100%;
-  opacity      : 0;
-}
-
-.starRating:not(old) > label{
-  display         : block;
-  float           : right;
-  position        : relative;
-  background      : url('star-off.svg');
-  background-size : contain;
-}
-
-.starRating:not(old) > label:before{
-  content         : '';
-  display         : block;
-  width           : 1.5em;
-  height          : 1.5em;  
-  background      : url('star-on.svg');
-  background-size : contain;
-  opacity         : 0;
-  transition      : opacity 0.2s linear;
-}
-
-.starRating:not(old) > label:hover:before,
-.starRating:not(old) > label:hover ~ label:before,
-.starRating:not(:hover) > :checked ~ label:before{
-  opacity : 1;
-}*/
 
 .rate {
     float: middle;
@@ -101,15 +62,50 @@ textarea {
 }
 
 #submit {
-  width: 20em;  height: 2em;
+  width: 10em;  height: 2em;
 }
 
 #clear {
-  width: 20em;  height: 2em;
+  width: 10em;  height: 2em;
 }
 
 #buttons {
-    font-family: 'Lobster', cursive;
-    font-size: 20px;
     text-align: center;
+}
+
+#clear {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  background-color: #842239;
+  border-color: #842239;
+  color: white;
+  float: middle;
+  /*line-height: 50px;*/
+  
+  vertical-align: text-top;
+
+}
+
+#submit {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  background-color: #842239;
+  border-color: #842239;
+  color: white;
+  float: middle;
+  /*line-height: 50px;*/
+  
+  vertical-align: text-top;    
+}
+
+#clear:hover {
+    background-color: #ffbbbc;
+    border-color: #ffbbbc;
+    /*color: #ffbbbc;*/
+}
+
+#submit:hover {
+    background-color: #ffbbbc;
+    border-color: #ffbbbc;
+    /*color: #ffbbbc;*/
 }
