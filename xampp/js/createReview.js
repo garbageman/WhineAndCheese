@@ -38,6 +38,23 @@ function getRating() {
   return 0;
 }
 
+document.getElementById("rating1").onclick = function() {
+	document.getElementById("ratingText").innerHTML = "Only when I am wasted";
+}
+document.getElementById("rating2").onclick = function() {
+	document.getElementById("ratingText").innerHTML = "Maybe if I'm tipsy";
+}
+document.getElementById("rating3").onclick = function() {
+	document.getElementById("ratingText").innerHTML = "I'd give this to Chris";
+}
+document.getElementById("rating4").onclick = function() {
+	document.getElementById("ratingText").innerHTML =  "Not bad at ALL";
+}
+document.getElementById("rating5").onclick = function() {
+	document.getElementById("ratingText").innerHTML = "The Damien DELIGHT!!!";
+}
+
+    	
 // Section for adding into database on submit.
 
 $("#submit").click(function() {
