@@ -27,7 +27,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="nav navbar-nav navbar-right login-container">
             <ul class="nav navbar-nav">
-                <li><a href="/groupProject/xampp/login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
+                <li><a id="userLink" href="login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
                 <li><a id="logoutLink" href="#"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span>LogOut</span></a></li>
             </ul>
         </div>
@@ -41,7 +41,7 @@
         <div class="row searchbar-container">
             <div class="col-lg-offset-3 col-lg-6">
                 <div class="input-group">
-                    <input type="text" id="searchBar" class="form-control" placeholder="Search for another wine or cheese...">
+                    <input type="text" id="searchBar" onkeypress="handle(event)" class="form-control" placeholder="Search for another wine or cheese...">
                     <span class="input-group-btn">
               <button class="btn btn-default" id="searchButton" type="button">Go!</button>
             </span>
