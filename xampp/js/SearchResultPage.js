@@ -32,7 +32,7 @@ function buildPairings(serviceInfo) {
     }
 
     //Sort pairings in descending order by rating
-    pairings.sort(function(p1, p2) {return p2.rating - p1.rating});
+    pairings.sort(function(p1, p2) {return p2.avg_rating - p1.avg_rating});
 
     return pairings;
 }
