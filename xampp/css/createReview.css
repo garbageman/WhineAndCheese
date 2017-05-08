@@ -26,13 +26,12 @@ textarea {
 
 }
 
-.starRating:not(old){ 
+/*.starRating:not(old){ 
   display        : inline-block;
   width          : 7.5em;
   height         : 1.5em;
   overflow       : hidden;
-/*  vertical-align : bottom;
-*/}
+}
 
 .starRating:not(old) > input{
   margin-right : -100%;
@@ -52,7 +51,7 @@ textarea {
   display         : block;
   width           : 1.5em;
   height          : 1.5em;  
-  background      : url('damien.png');
+  background      : url('star-on.svg');
   background-size : contain;
   opacity         : 0;
   transition      : opacity 0.2s linear;
@@ -62,8 +61,44 @@ textarea {
 .starRating:not(old) > label:hover ~ label:before,
 .starRating:not(:hover) > :checked ~ label:before{
   opacity : 1;
-}
+}*/
 
+.rate {
+    float: middle;
+    height: 80px;
+    padding: 0 10px;
+    display : inline-block;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width: 1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:60px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+   color: #842239;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+   color: #842239;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+   color: #842239;
+}
 
 #submit {
   width: 20em;  height: 2em;
@@ -72,7 +107,6 @@ textarea {
 #clear {
   width: 20em;  height: 2em;
 }
-
 
 #buttons {
     font-family: 'Lobster', cursive;
