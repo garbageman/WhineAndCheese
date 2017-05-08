@@ -4,7 +4,7 @@ $("#searchButton").click(function() {
   var query = $("#searchBar").val();
   var items = query.split(" & ");
   // Figure out if wine
-  let str = "SearchResultPage.html?item1=";
+  let str = "searchResult.html?item1=";
   if (items.length > 0) {
     str = str + items[0].replace(" ","+").trim();
     if (items.length > 1) {

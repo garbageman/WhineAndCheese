@@ -57,9 +57,19 @@ function relocate(wine, cheese) {
 main();
 
 function main () {
-    let wineName = CONFIG.QueryString()["wine"];
-    let cheeseName = CONFIG.QueryString()["cheese"];
+    let wineName = (CONFIG.QueryString()["wine"]).replace("+", " ");
+    let cheeseName = (CONFIG.QueryString()["cheese"]).replace("+", " ");
     let title = `${wineName} &amp; ${cheeseName}`;
+    let wineUrl = CONFIG.wineURL + "?wine=" + wineName;
+    let cheeseUrl = CONFIG.cheeseURL + "?cheese=" + cheeseName;
+    console.log(wineUrl);
+    console.log(cheeseUrl);
+    
+    document.getElementById("wine-img").src = wineUrl;
+    document.getElementById("cheese-img").src = cheeseUrl;
+    
+    //$("#image1").attr("src", wineConcat);
+    //$("#image3").attr("src", cheeseConcat);
     
     document.getElementById("pairing-title").innerHTML = title;
     document.getElementById("wine-title").innerHTML = wineName;
@@ -84,16 +94,6 @@ function main () {
     });
     
     grabReviewsService.validateSearch(wineName, cheeseName).then(function (result) {
-        //for (let reviews of result) {
-        //    //console.log(components["review"]);
-        //    let user = reviews["name"];
-        //    let review = reviews["review"];
-        //    let rating = reviews["rating"];
-        //    
-        //    console.log("user: " + user);
-        //    console.log("review: " + review);
-        //    console.log("rating: " + rating);
-        //}
         let reviews = buildReviews(result);
         for (let review of reviews) {
             console.log(review.toString());

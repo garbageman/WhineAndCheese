@@ -13,11 +13,55 @@ img.pairing-img {
 }*/
 
 .container-fluid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.pairings-container {
     padding-left: 5rem;
     padding-right: 5rem;
 }
 
-/*.pairings-container {
-    padding-left: 10rem;
-    padding-right: 10rem;
-}*/
+.star {
+   /*font-size: 128px;*/
+   color: #842239;
+   /* Some sort of border */
+   /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
+
+.review-title {
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    /*padding-right: 30rem;*/
+    /*margin: 0rem;*/
+}
+
+.btn {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    background-color: #842239;
+    border-color: #842239;
+    color: white;
+    float: right;
+    /*line-height: 50px;*/
+    
+    vertical-align: text-top;
+    /*display: inline-block;*/
+    /*text-align: right;*/
+    /*display : flex;*/
+    /*align-items : center;*/
+    padding-left:2rem;
+    padding-right:2rem;
+
+    
+}
+
+.btn:hover {
+    background-color: #ffbbbc;
+    border-color: #ffbbbc;
+    /*color: #ffbbbc;*/
+}
+
+hr {
+    border-color: #842239;
+}
