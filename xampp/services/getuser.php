@@ -53,7 +53,7 @@
         echo "<img class=\"icons\" src=\"services/wineImage.php?wine=" . $wine['name'] . "\" alt=\"\">";
         echo "<div class=\"col-md-5\">";
         $script = "javascript:window.location.href = 'pairing.html?wine=' + '" . $row['wine'] . "'.replace(' ', '+') + '&cheese=' + '" . $row['cheese'] . "'.replace(' ', '+');";
-        echo "<h3 class=\"thumbnail-header\" onclick=\"" . $script . "\" value=\"wine=" . $row['wine'] . "&cheese=" . $row['cheese'] . "\">" . $row['wine'] . " and " . $row['cheese'] . "</h3>";
+        echo "<h3 class=\"thumbnail-header\" style=\"cursor: pointer;\" onclick=\"" . $script . "\" value=\"wine=" . $row['wine'] . "&cheese=" . $row['cheese'] . "\">" . $row['wine'] . " and " . $row['cheese'] . "</h3>";
         echo "<p class=\"thumbnail-rating\">" . $row['review'] . "</p>";
         echo "</div>";
         echo "</div></div></div></div>";
