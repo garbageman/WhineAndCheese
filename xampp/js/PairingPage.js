@@ -65,6 +65,7 @@ function relocateUserProfile(user) {
 
 function generateStarRating(rating) {
     let result = "";//"<div class='star'>";
+    let num = rating;
     for (let i = 0; i < rating; i++) {
         result += "<span class='star'>&#9733;</span>";
     }
