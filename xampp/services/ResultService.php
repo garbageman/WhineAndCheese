@@ -51,8 +51,12 @@ else if (isset($cheese))
 else
     $sqlQuery = "";
 
-$result = $db->query($sqlQuery);
-
-echo json_encode(($result->fetch_all(MYSQLI_ASSOC)));
+// $result = $db->query($sqlQuery);
 
 
+
+if($result = $db->query($sqlQuery)) {
+  echo(json_encode($result->fetch_all(MYSQLI_ASSOC)));
+}
+
+echo json_encode(" { result : false, message : \"No Query\"}");
