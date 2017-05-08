@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="nav navbar-nav navbar-right login-container">
         <ul class="nav navbar-nav">
-          <li><a href="/groupProject/xampp/login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
+          <li><a id="userLink" href="login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
           <li><a id="logoutLink" href="#"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span>LogOut</span></a></li>
         </ul>
       </div>
@@ -63,7 +63,6 @@
 
     <div id="pairing-reviews" class="container-fluid pairings-container">
        
-       
        <div class="avg-rating-container review-title">
         Average Rating: 
         <span id="avg-rating">
@@ -79,9 +78,8 @@
           <span class="review-title">Reviews</span>
           <input id="toReviewButton" type="button" class="btn" value="Write a Review">
       </div>
-      
-       <div id="all-reviews" class="col-lg-offset-2 col-lg-8 top-section">
 
+       <div id="all-reviews" class="col-lg-offset-2 col-lg-8 top-section">
 
        </div>
      </div>
@@ -100,7 +98,7 @@
 
     <script src="js/config.js"></script>
     <script src="js/userService.js"></script>
-    <script src="js/UserManager.js"></script>
+    <script src="js/userManager.js"></script>
     <script src="js/Landing.js"></script>
     <script src="js/infoService.js"></script>
     <script src="js/grabReviewsService.js"></script>

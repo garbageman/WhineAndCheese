@@ -23,6 +23,8 @@
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/userprofile.css">
+
     <!-- Custom CSS -->
     <!-- <link href="css/1-col-portfolio.css" rel="stylesheet"> -->
 
@@ -51,8 +53,8 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="nav navbar-nav navbar-right login-container">
           <ul class="nav navbar-nav">
-            <li><a href="#"><span class="glyphicon glyphicon-pencil white navbar-icon" aria-hidden="true"></span>Create A Review</a></li>
-            <li><a href="login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
+            <li><a id="userLink" href="login.html"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span id="loginLink">Login</span></a></li>
+            <li><a id="logoutLink" href="#"><span class="glyphicon glyphicon-user white navbar-icon" aria-hidden="true"></span><span>LogOut</span></a></li>
           </ul>
         </div>
     </div>
@@ -73,7 +75,6 @@
     <script src="js/config.js"></script>
     <script src="js/userService.js"></script>
     <script src="js/userManager.js"></script>
-    <script src="js/ProfilePage.js"></script>
     <script src="js/userProfile.js"></script>
 
 </body>

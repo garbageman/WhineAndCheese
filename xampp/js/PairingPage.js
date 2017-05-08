@@ -30,13 +30,11 @@ function generatePairingInformationSection (sectionId, content) {
 function generateReviewsSection (reviews) {
     let reviewSection = document.getElementById("all-reviews");
     let id = 0;
-    
+
     for (let review of reviews) {
         let userProfileUrl = relocateUserProfile(review.userName);
         let starRating = generateStarRating(review.rating);
-        
         reviewSection.innerHTML += "<div class='thumbnail   thumbnail-col' id='review" + id + "'>";
-
         let row = document.getElementById("review" + id);
         row.innerHTML = `<span class='  thumbnail-header '><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
         row.innerHTML += `<span class='   rating'>${starRating}</span><br>`;

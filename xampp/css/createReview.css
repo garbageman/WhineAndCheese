@@ -21,7 +21,7 @@ img {
 textarea {
 	width: 600px;
   height: 300px;
-
+  font-family: Arial;
 }
 
 .rate {
@@ -31,8 +31,8 @@ textarea {
     display : inline-block;
 }
 .rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
+    position: absolute;
+    visibility: hidden;
 }
 .rate:not(:checked) > label {
     float:right;

@@ -82,6 +82,7 @@
 
 .page-body {
   background-color: #faf8d0;
+  padding-bottom: 10em;
 }
 
 .login-container {
@@ -99,4 +100,9 @@
 
 #logoutLink {
   display: none;
+}
+
+.page-footer {
+  background-color: #842239;
+  height:50px;
 }

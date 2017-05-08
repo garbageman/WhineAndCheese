@@ -64,6 +64,8 @@
         echo "<div class='col-sm-4'>";
         $script = "javascript:window.location.href = 'pairing.html?wine=' + '" . $row['wine'] . "'.replace(' ', '+') + '&cheese=' + '" . $row['cheese'] . "'.replace(' ', '+');";
         echo "<h3 class=\"thumbnail-header\" style=\"cursor: pointer;\" onclick=\"" . $script . "\" value=\"wine=" . $row['wine'] . "&cheese=" . $row['cheese'] . "\">" . $row['wine'] . " & " . $row['cheese'] . "</h3><br />";
+
+
         echo "<p class=\"thumbnail-rating\">" . $row['review'] . "</p>";
 
         echo "</div>";
