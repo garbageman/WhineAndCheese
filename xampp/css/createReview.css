@@ -23,9 +23,8 @@ img {
 textarea {
 	width: 600px;
   height: 300px;
-  
-}
 
+}
 
 .starRating:not(old){
   display        : inline-block;
