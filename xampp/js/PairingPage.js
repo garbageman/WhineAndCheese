@@ -35,11 +35,11 @@ function generateReviewsSection (reviews) {
         let userProfileUrl = relocateUserProfile(review.userName);
         let starRating = generateStarRating(review.rating);
         
-        reviewSection.innerHTML += "<div class='thumbnail col-lg-4  thumbnail-col' id='review" + id + "'>";
+        reviewSection.innerHTML += "<div class='thumbnail   thumbnail-col' id='review" + id + "'>";
 
         let row = document.getElementById("review" + id);
         row.innerHTML = `<span class='  thumbnail-header '><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
-        row.innerHTML += `<span class='  col-lg-2 rating'>${starRating}</span><br>`;
+        row.innerHTML += `<span class='   rating'>${starRating}</span><br>`;
         row.innerHTML += `<span class=' '>${review.review}</span>`;
 
         reviewSection.innerHTML += "</div>";
