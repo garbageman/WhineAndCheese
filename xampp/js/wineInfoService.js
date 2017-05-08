@@ -1,20 +1,15 @@
-/**
- * Created by Christopher on 5/6/2017.
- */
-
-let searchService = {
-    validateSearch: function (item1, item2) {
-        //console.log(item1);
+let wineInfoService = {
+    validateSearch: function (wine) {
+        console.log(wine);
         /* Create a credentials json for validation */
         let searchParams = {
-            "item1": item1,
-            "item2": item2
+            "wine": wine,
         };
 
         /* Create a promise that resolves when the ajax query for validation works */
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: CONFIG.baseTestURL + "ResultService.php",
+                url: CONFIG.baseTestURL + "InfoService.php",
                 data: searchParams,
                 dataType: "json",
                 contentType: "application/json"

@@ -24,6 +24,7 @@ $item1 = str_replace("+", " ", $_GET['item1']);
 
 //Look for item1 in the wine table
 $wine_query = sprintf("select * from %s where name=\"%s\"", $wine_table, $item1);
+
 $wine_result = $db->query($wine_query);
 //If we got a result, item1 is a wine.
 if ($wine_result->num_rows > 0) {
