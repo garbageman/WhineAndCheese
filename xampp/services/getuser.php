@@ -36,8 +36,9 @@
   $result = mysqli_query($con,$sql);
   echo "<div class=\"container-fluid page-body\"><div class=\"row\"><div class=\"col-lg-12\">";
   echo "<h1 class=\"username-display\">" . $username . "</h1></div></div>";
-  echo "<h2 class=\"review-title\">Reviews</h2>";
   echo "<div class=\"col-lg-offset-3 col-lg-6 top-section\">";
+  echo "<h2 class=\"review-title\">Reviews</h2>";
+
 
   while($row = mysqli_fetch_array($result)) {
     $sl = "SELECT * FROM wine where name = '" . $row['wine'] . "'";
