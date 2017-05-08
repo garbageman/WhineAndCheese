@@ -13,6 +13,8 @@ $db = establishConnection();
 $pairing_table = "pairing";
 
 $top_rated_query = sprintf("select * from %s ORDER BY rating DESC LIMIT 0,9", $pairing_table);
-$result = $db->query($top_rated_query);
+if($result = $db->query($top_rated_query)) {
+  echo(json_encode($result->fetch_all(MYSQLI_ASSOC)));
+}
 
-echo(json_encode($result->fetch_all(MYSQLI_ASSOC)));
+echo json_encode(" { result : false, message : \"No Query\"}");
