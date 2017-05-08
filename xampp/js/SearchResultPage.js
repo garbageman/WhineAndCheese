@@ -62,11 +62,7 @@ function displayResults(pairings) {
 
 function relocate(wine, cheese) {
 
-<<<<<<< HEAD
     let url = "pairing.html"; //CONFIG.baseTestURL + "pairing.html";
-=======
-    let url = "pairing.html";
->>>>>>> bafd54fdee363409c0ff1dafddd068f7625a4367
     let params = ("?wine=" + wine + "&" + "cheese=" + cheese).replace(" ", "+");
 
     window.location.href = url + params;
