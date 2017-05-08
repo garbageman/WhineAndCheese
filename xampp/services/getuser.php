@@ -20,10 +20,10 @@
   $q =  trim($query['q']); //Variable name for user
 
   $host = "localhost";
-  // $user = "dbuser"; //For Matt's computer
-  $user = "testUser"; //Correct database username
-  // $password = "goodbyeWorld"; //For Matt's Computer
-  $password = "moatsAndFerries"; //Correct database password
+  $user = "dbuser"; //For Matt's computer
+  // $user = "testUser"; //Correct database username
+  $password = "goodbyeWorld"; //For Matt's Computer
+  // $password = "moatsAndFerries"; //Correct database password
   $database = "gb";
 
 
