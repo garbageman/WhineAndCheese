@@ -49,6 +49,7 @@ var UserManager = {
         $("#userLink").attr("href","userProfile.html?user=" + username);
       }else {
         $("#loginLink").text("Login");
+        $("#userLink").attr("href","login.html");
       }
     });
   }
