@@ -1,15 +1,14 @@
-let wineInfoService = {
-    validateSearch: function (wine) {
-        console.log(wine);
+let grabReviewsService = {
+    validateSearch: function (wine, cheese) {
         /* Create a credentials json for validation */
         let searchParams = {
             "wine": wine,
+            "cheese": cheese
         };
-
         /* Create a promise that resolves when the ajax query for validation works */
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: CONFIG.baseTestURL + "InfoService.php",
+                url: CONFIG.baseTestURL + "GrabReviewsService.php",
                 data: searchParams,
                 dataType: "json",
                 contentType: "application/json"

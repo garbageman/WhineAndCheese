@@ -1,6 +1,6 @@
 let wineInfoService = {
-    validateSearch: function (wine) {
-        console.log(wine);
+    validateSearch: function (cheese) {
+        console.log(cheese);
         /* Create a credentials json for validation */
         let searchParams = {
             "wine": wine,

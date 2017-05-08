@@ -1,11 +1,13 @@
-let wineInfoService = {
-    validateSearch: function (wine) {
-        console.log(wine);
+let InfoService = {
+    validateSearch: function (type, name) {
         /* Create a credentials json for validation */
-        let searchParams = {
-            "wine": wine,
-        };
-
+        let searchParams = new Object();
+        
+        if (type === "wine") {
+            searchParams.wine = name;
+        } else {
+            searchParams.cheese = name;
+        }
         /* Create a promise that resolves when the ajax query for validation works */
         return new Promise((resolve, reject) => {
             $.ajax({
