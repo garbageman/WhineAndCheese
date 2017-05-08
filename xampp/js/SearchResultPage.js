@@ -13,11 +13,11 @@ main();
 /*
  * This class represents a pairing.
  */
-function Pairing(wine, cheese, numReviews, rating) {
+function Pairing(wine, cheese, numReviews, avg_rating) {
     this.wine = wine;
     this.cheese = cheese;
     this.numReviews = Number(numReviews);
-    this.rating = Number(rating);
+    this.avg_rating = Number(avg_rating);
 }
 
 /*
@@ -27,7 +27,7 @@ function Pairing(wine, cheese, numReviews, rating) {
 function buildPairings(serviceInfo) {
     let pairings = [];
     for (let components of serviceInfo) {
-        let pairing = new Pairing(components['wine'], components['cheese'], components['num_reviews'], components['rating']);
+        let pairing = new Pairing(components['wine'], components['cheese'], components['num_reviews'], components['avg_rating']);
         pairings.push(pairing);
     }
 
@@ -46,7 +46,7 @@ function displayResults(pairings) {
 
         let row = document.getElementById("result" + id);
         row.innerHTML = "<span class='col-lg-8 pairing'>" + pairing['wine'] + " & " + pairing['cheese'] + "</span>";
-        row.innerHTML += "<span class='col-lg-2 rating'>Rating: " + pairing['rating'] + "</span>";
+        row.innerHTML += "<span class='col-lg-2 rating'>Rating: " + pairing['avg_rating'] + "</span>";
         row.innerHTML += "<span class='col-lg-2 numReviews'>Reviews: " + pairing['numReviews'] + "</span>";
 
         results.innerHTML += "</div>";
