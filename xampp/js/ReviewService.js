@@ -1,12 +1,6 @@
 "use strict";
 
 var ReviewService = {
-  pairingReviews: function(wine,cheese) {
-
-  },
-  userReviews: function(user) {
-
-  },
   createReview: function(user, wine, cheese, review, rating) {
     // Information has already been validated
     /* Create a credentials json for validation */
