@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset= "UTF-8">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -41,11 +41,11 @@
     		<img id="image3" src="" width="300" height="250" alt="pairing3" /> <br> <br>
       </div>
 
-      <form action = "" id="reviewForm">
+      <form id="reviewForm">
         <div id="pairing">
           <h1> Your Review </h1>
-      		<fieldset class="starRating" id="rating">
-      			<input id="rating5" type="radio" name="rating" value="5" title="The Damien DELIGHT!!!" >
+          <div class="rate" id="rating">
+            <input id="rating5" type="radio" name="rating" value="5" title="The Damien DELIGHT!!!" >
             <label for="rating5">5</label>
             <input id="rating4" type="radio" name="rating" value="4" title="Not bad at ALL">
             <label for="rating4">4</label>
@@ -55,12 +55,11 @@
             <label for="rating2">2</label>
             <input id="rating1" type="radio" name="rating" value="1" title="Only when I am wasted" checked>
             <label for="rating1">1</label>
-          </fieldset>
+          </div>
+          <br>
           <p id = ratingText > 
             "Only when I am wasted"
           </p>
-
-
       		<textarea id="review" placeholder="Leave your review here!"></textarea>
         </div>
       </form>
@@ -77,10 +76,6 @@
     	<br>
     	<br>
     	<br>
-
-
-
-
 
     </div>
   </div>
