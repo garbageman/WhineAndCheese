@@ -1,6 +1,7 @@
 UserManager.setUserLink();
 
 $("#searchButton").click(function() {
+  let query = $("#searchBar").val();
   let items = query.split(" & ");
   let str = "searchResult.html?item1=";
   if (items.length > 0) {
@@ -15,6 +16,7 @@ $("#searchButton").click(function() {
 var handle = function(e) {
   if(e.keyCode === 13){
     e.preventDefault();
+    let query = $("#searchBar").val();
     let items = query.split(" & ");
     let str = "searchResult.html?item1=";
     if (items.length > 0) {
