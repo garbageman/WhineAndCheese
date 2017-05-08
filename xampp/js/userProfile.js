@@ -9,6 +9,7 @@ main();
 function main() {
   let user = getParameterByName('user');
   showUser(user);
+  UserManager.setUserLink();
 }
 
 function getParameterByName(name, url) {

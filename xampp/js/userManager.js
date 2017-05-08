@@ -46,6 +46,7 @@ var UserManager = {
       if (response.result) {
         $("#loginLink").text(UserManager.user());
         $("#logoutLink").css("display","list-item");
+        $("#userLink").attr("href","userProfile.html?user=" + username);
       }else {
         $("#loginLink").text("Login");
       }
