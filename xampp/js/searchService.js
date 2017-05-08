@@ -1,7 +1,7 @@
 /**
  * Created by Christopher on 5/6/2017.
  */
-
+"use strict";
 let searchService = {
     validateSearch: function (item1, item2) {
         //console.log(item1);
@@ -19,8 +19,20 @@ let searchService = {
                 dataType: "json",
                 contentType: "application/json"
             }).done(function (response) {
-                console.log(response);
-                // resolve(JSON.parse(response));
+                resolve(response);
+            }).error(function (err) {
+                reject(err);
+            });
+        });
+    },
+    topRated: function() {
+
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url: CONFIG.baseTestURL + "findTopRatedService.php",
+                dataType: "json",
+                contentType: "application/json"
+            }).done(function (response) {
                 resolve(response);
             }).error(function (err) {
                 reject(err);
