@@ -48,16 +48,24 @@
       $r = mysqli_query($con,$sq) or die(mysqli_error($con));
       if($cheese = mysqli_fetch_array($r)) {
         echo "<div class=\"thumbnail-col\"><div class=\"thumbnail\">";
+        echo "<img align=\"left\" class=\"icons\" src=\"services/cheeseImage.php?cheese=" . $cheese['name'] . "\" alt=\"\">";
+        echo "<img align=\"right\" class=\"icons\" src=\"services/wineImage.php?wine=" . $wine['name'] . "\" alt=\"\">";
         echo "<div class=\"row\">";
-        echo "<div class=\"col-md-7\">";
-        echo "<img class=\"icons\" src=\"services/cheeseImage.php?cheese=" . $cheese['name'] . "\" alt=\"\">";
-        echo "<img class=\"icons\" src=\"services/wineImage.php?wine=" . $wine['name'] . "\" alt=\"\">";
-        echo "<div class=\"col-md-5\">";
+
+        // echo "<div class=\"col-md-7\">";
+        // echo "<img class=\"icons\" src=\"services/cheeseImage.php?cheese=" . $cheese['name'] . "\" alt=\"\">";
+        // echo "<img class=\"icons\" src=\"services/wineImage.php?wine=" . $wine['name'] . "\" alt=\"\">";
+        // echo "<div class=\"col-md-5\">";
+        echo "<div class=\"container-fluid reviews\">";
         $script = "javascript:window.location.href = 'pairing.html?wine=' + '" . $row['wine'] . "'.replace(' ', '+') + '&cheese=' + '" . $row['cheese'] . "'.replace(' ', '+');";
         echo "<h3 class=\"thumbnail-header\" style=\"cursor: pointer;\" onclick=\"" . $script . "\" value=\"wine=" . $row['wine'] . "&cheese=" . $row['cheese'] . "\">" . $row['wine'] . " and " . $row['cheese'] . "</h3>";
         echo "<p class=\"thumbnail-rating\">" . $row['review'] . "</p>";
         echo "</div>";
-        echo "</div></div></div></div>";
+        // echo "</div>";
+
+        echo "</div>";
+
+        echo "</div></div>";
       }
     }
 

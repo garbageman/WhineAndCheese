@@ -1,8 +1,12 @@
 .icons{
     display:inline-block;
-    width: 64px;
-    height: 64px;
+    width: 50%;
+    object-fit: contain;
+    /*margin: 0 20px 0 0;*/
+    display: block;
     float: right;
+    max-height: 100px;
+
    }
 
 table {
@@ -55,14 +59,25 @@ th {text-align: left;}
   margin-bottom: .5rem;
 }
 
+.reviews {
+  max-width: 70%;
+}
+
 .thumbnail-col {
   padding-right: .5rem;
   padding-left: .5rem;
+  display: block;
 }
 
 .thumbnail-header {
   font-family: 'Lobster', cursive;
   font-size: 24px;
+  text-align: center;
+}
+
+.thumbnail-rating {
+  text-align: center;
+  display: block;
 }
 
 .review-title {
