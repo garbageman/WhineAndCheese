@@ -39,6 +39,12 @@ th {text-align: left;}
   text-align: center;
 }
 
+.review-title {
+  text-align: left;
+  font-family: 'Lobster', cursive;
+  padding-left: 2rem;
+}
+
 .thumbnail {
   border-radius: 1rem;
   border-style: solid;
