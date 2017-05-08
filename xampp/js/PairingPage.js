@@ -29,12 +29,16 @@ function generateReviewsSection (reviews) {
     let reviewSection = document.getElementById("pairing-reviews");
     let id = 0;
     for (let review of reviews) {
+        let userProfileUrl = relocateUserProfile(review.userName);
+        let starRating = generateStarRating(review.rating);
+        
         reviewSection.innerHTML += "<div class='row searchrow hover' id='result" + id + "'>";
-
+        
         let row = document.getElementById("result" + id);
-        row.innerHTML = "<span class='col-lg-8 pairing'>User: " + review['userName'] + "</span>";
-        row.innerHTML += "<span class='col-lg-2 rating'>Review: " + review['review'] + "</span>";
-        row.innerHTML += "<span class='col-lg-2 numReviews'>Rating: " + review['rating'] + "</span>";
+        row.innerHTML = `<span class='col-lg-8 pairing'><a href='${userProfileUrl}'> ${review.userName} </a></span>`;
+        row.innerHTML += `${starRating}<br>`;
+        row.innerHTML += `<span class='col-lg-2 rating'>Review: ${review.review} </span>`;
+        //row.innerHTML += `<span class='col-lg-2 numReviews'>Rating: ${review.rating} </span>`;
 
         // for (let field in pairing) {
         //     if (pairing.hasOwnProperty(field)) {
@@ -48,10 +52,24 @@ function generateReviewsSection (reviews) {
     }
 }
 
-function relocate(wine, cheese) {
+function relocateWriteReview(wine, cheese) {
     let url = "createReview.html";
     let params = ("?wine=" + wine + "&" + "cheese=" + cheese).replace(" ", "+");
     window.location.href = url + params;
+}
+
+function relocateUserProfile(user) {
+    let url = "userProfile.html?user=" + user;
+    return url;
+}
+
+function generateStarRating(rating) {
+    let result = "";//"<div class='star'>";
+    for (let i = 0; i < rating; i++) {
+        result += "<span class='star'>&#9733;</span>";
+    }
+    //result += "</div>";
+    return result;
 }
 
 main();
@@ -74,7 +92,7 @@ function main () {
     document.getElementById("pairing-title").innerHTML = title;
     document.getElementById("wine-title").innerHTML = wineName;
     document.getElementById("cheese-title").innerHTML = cheeseName;
-    document.getElementById("toReviewButton").onclick = function () { relocate(wineName, cheeseName); };
+    document.getElementById("toReviewButton").onclick = function () { relocateWriteReview(wineName, cheeseName); };
     
     //document.getElementById("wine-info").innerHTML = getInformation(wineName);
     
