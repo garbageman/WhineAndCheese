@@ -109,6 +109,8 @@ function main () {
     searchService.validateSearch(wineName, cheeseName).then(function (result) {
         let rating = result[0]["avg_rating"];
         console.log("avg rating: " + rating);
+        let ratingString = generateStarRating(rating);
+        document.getElementById("avg-rating").innerHTML = ratingString;
     });
 
     grabReviewsService.validateSearch(wineName, cheeseName).then(function (result) {
