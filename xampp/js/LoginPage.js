@@ -19,11 +19,10 @@ $("#toggleButton").click(function() {
 });
 
 /* When the form is submitted */
-$("form#loginForm").submit(function(evt) {
+$("#confirmForm").click(function() {
   /* Since the default action is to move to the next page */
   /* Prevent the default actions */
   var form = this;
-  evt.preventDefault();
 
   /* There is definitely an easier way to do this */
   // console.log("what's going on");
@@ -43,7 +42,16 @@ $("form#loginForm").submit(function(evt) {
         /* Maybe error message goes here ? */
         console.log("username wasn't set");
       }
-      form.submit();
+      UserManager.validate().then(function(response) {
+              if (response.result) {
+                if ((CONFIG.QueryString().wine !== undefined) || (CONFIG.QueryString().cheese !== undefined)) {
+                  window.location.href = 'createReview.html?wine=' + CONFIG.QueryString().wine + "&cheese=" + CONFIG.QueryString().cheese;
+                } else {
+                  window.location.href = 'index.html'; 
+                }
+                
+              }
+      });
     });
 
   } else {
@@ -64,7 +72,17 @@ $("form#loginForm").submit(function(evt) {
               /* Maybe error message goes here ? */
               console.log("username wasn't set");
             }
-            form.submit();
+            // Check if the user is logged in, if so, redirect to landing page
+            UserManager.validate().then(function(response) {
+              if (response.result) {
+                if ((CONFIG.QueryString().wine !== undefined) || (CONFIG.QueryString().cheese !== undefined)) {
+                  window.location.href = 'createReview.html?wine=' + CONFIG.QueryString().wine + "&cheese=" + CONFIG.QueryString().cheese;
+                } else {
+                  window.location.href = 'index.html'; 
+                }
+                
+              }
+            });
           });
 
         } else {
@@ -78,10 +96,3 @@ $("form#loginForm").submit(function(evt) {
 });
 
 UserManager.setUserLink();
-
-// Check if the user is logged in, if so, redirect to landing page
-UserManager.validate().then(function(response) {
-  if (response.result) {
-    window.location.href = 'index.html';
-  }
-});

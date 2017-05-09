@@ -2,15 +2,15 @@
 UserManager.validate().then(function(response) {
   // Not logged in
   if (!response.result) {
-    window.location.href="login.html?redirect=createReview";
+    window.location.href="login.html?wine=" + CONFIG.QueryString()['wine'] + "&cheese=" + CONFIG.QueryString()['cheese'];
   } else {
 
   }
 });
 
 // Obtains wine and cheese in URL
-var wine = CONFIG.QueryString()['wine'];
-var cheese = CONFIG.QueryString()['cheese'];
+var wine = CONFIG.QueryString()['wine'].replace("+", " ");
+var cheese = CONFIG.QueryString()['cheese'].replace("+", " ");
 
 var cheeseURL = CONFIG.cheeseURL;
 var wineURL = CONFIG.wineURL;
@@ -25,6 +25,7 @@ $("#wineAndCheese").text(wine + " & " + cheese);
 $("#clear").click(function() {
 	console.log("cleared");
 	$("#rating1").prop("checked", true);
+  $("#review").val("");
 });
 
 
@@ -81,3 +82,9 @@ $("#submit").click(function() {
 });
 
 UserManager.setUserLink();
+
+$("#logoutLink").click(function() {
+  UserManager.logout();
+  UserManager.setUserLink();
+  $("#logoutLink").css("display","none");
+});
